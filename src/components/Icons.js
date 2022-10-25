@@ -6,6 +6,7 @@ import {
   mdiLoading,
   mdiBrightness4,
   mdiBrightness6,
+  mdiAlphaTBoxOutline,
 } from '@mdi/js';
 
 export default function Icons() {
@@ -76,6 +77,17 @@ export default function Icons() {
     />
   );
 
+  const titles = (
+    <Icon
+      path={mdiAlphaTBoxOutline}
+      size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
   const icons = {
     back,
     home,
@@ -83,6 +95,7 @@ export default function Icons() {
     loading,
     dark,
     light,
+    titles,
   };
 
   return icons;

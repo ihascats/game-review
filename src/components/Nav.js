@@ -6,6 +6,8 @@ export default function Nav({
   setDarkMode,
   searchState,
   setSearchState,
+  titleToggle,
+  setTitleToggle,
 }) {
   const uiIcons = Icons();
   function changeMode() {
@@ -19,11 +21,17 @@ export default function Nav({
   }
 
   return (
-    <nav className=" grid grid-cols-2 bg-neutral-300 h-14 items-center px-2 dark:bg-neutral-800">
+    <nav className=" grid grid-cols-2 transition-colors bg-neutral-300 h-14 items-center px-2 dark:bg-neutral-800">
       <h1 className="font-mono text-2xl text-neutral-800 dark:text-neutral-200">
         GReview
       </h1>
       <div className=" flex justify-end gap-3">
+        <button
+          className="fill-neutral-500"
+          onClick={() => setTitleToggle(!titleToggle)}
+        >
+          {uiIcons.titles}
+        </button>
         <button className="fill-neutral-500" onClick={changeMode}>
           {darkMode ? uiIcons.light : uiIcons.dark}
         </button>
