@@ -1,5 +1,12 @@
 import Icon from '@mdi/react';
-import { mdiArrowLeft, mdiHome, mdiCloseCircle, mdiLoading } from '@mdi/js';
+import {
+  mdiArrowLeft,
+  mdiHome,
+  mdiCloseCircle,
+  mdiLoading,
+  mdiBrightness4,
+  mdiBrightness6,
+} from '@mdi/js';
 
 export default function Icons() {
   const back = (
@@ -47,11 +54,35 @@ export default function Icons() {
     />
   );
 
+  const dark = (
+    <Icon
+      path={mdiBrightness4}
+      size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
+  const light = (
+    <Icon
+      path={mdiBrightness6}
+      size={1}
+      horizontal
+      vertical
+      rotate={180}
+      color="inherit"
+    />
+  );
+
   const icons = {
     back,
     home,
     cancelSearch,
     loading,
+    dark,
+    light,
   };
 
   return icons;
