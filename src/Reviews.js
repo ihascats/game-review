@@ -7,6 +7,7 @@ export default function Reviews() {
   const [darkMode, setDarkMode] = useState(false);
   const [searchState, setSearchState] = useState(false);
   const [reviewsList, setReviewsList] = useState([]);
+  const [filterReviews, setFilterReviews] = useState([]);
   const [fetchStatus, setFetchStatus] = useState();
   const [titleToggle, setTitleToggle] = useState(false);
   const darkSwitch = useRef();
@@ -60,6 +61,8 @@ export default function Reviews() {
         setSearchState={setSearchState}
         titleToggle={titleToggle}
         setTitleToggle={setTitleToggle}
+        reviewsList={reviewsList}
+        setFilterReviews={setFilterReviews}
       />
       {fetchStatus ? (
         <h1 className=" text-center text-rose-800 font-bold text-2xl py-12">
@@ -68,13 +71,21 @@ export default function Reviews() {
       ) : null}
       {reviewsList.length > 0 ? null : <Loading />}
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
-        {reviewsList.map((review) => (
-          <ReviewCard
-            key={review._id}
-            review={review}
-            titleToggle={titleToggle}
-          />
-        ))}
+        {filterReviews.length > 0 && searchState
+          ? filterReviews.map((review) => (
+              <ReviewCard
+                key={review._id}
+                review={review}
+                titleToggle={titleToggle}
+              />
+            ))
+          : reviewsList.map((review) => (
+              <ReviewCard
+                key={review._id}
+                review={review}
+                titleToggle={titleToggle}
+              />
+            ))}
       </ul>
     </div>
   );

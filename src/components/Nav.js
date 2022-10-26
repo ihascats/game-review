@@ -8,6 +8,8 @@ export default function Nav({
   setSearchState,
   titleToggle,
   setTitleToggle,
+  reviewsList,
+  setFilterReviews,
 }) {
   const uiIcons = Icons();
   function changeMode() {
@@ -18,6 +20,14 @@ export default function Nav({
       darkSwitch.current.classList.add('dark');
       setDarkMode(true);
     }
+  }
+  function find(event) {
+    const substring = event.target.value.toLowerCase();
+    setFilterReviews(
+      reviewsList.filter((review) =>
+        review.game_title.toLowerCase().includes(substring),
+      ),
+    );
   }
 
   return (
@@ -36,6 +46,9 @@ export default function Nav({
           {darkMode ? uiIcons.light : uiIcons.dark}
         </button>
         <input
+          onInput={(event) => {
+            find(event);
+          }}
           onFocus={() => setSearchState(true)}
           placeholder="Search..."
           className="w-full md:w-4/5 xl:w-1/2 bg-transparent border-b-2 border-neutral-600 dark:border-neutral-300 text-neutral-800 dark:text-neutral-200 outline-none focus:border-blue-500 dark:focus:border-blue-500"

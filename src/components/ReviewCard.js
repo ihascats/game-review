@@ -5,7 +5,7 @@ export default function ReviewCard({ review, titleToggle }) {
     <li className=" w-full">
       <Link to={`/reviews/${review._id}`}>
         <img
-          alt=""
+          alt={review.game_title}
           src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${review.steam_id}/header.jpg`}
           className=" w-full"
         ></img>
