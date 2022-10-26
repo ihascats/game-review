@@ -2,7 +2,12 @@ import { Link } from 'react-router-dom';
 
 export default function ReviewCard({ review, titleToggle }) {
   return (
-    <li className=" w-full">
+    <li
+      onClick={() => {
+        localStorage.setItem('background', review.steam_id);
+      }}
+      className=" w-full"
+    >
       <Link to={`/reviews/${review._id}`}>
         <img
           alt={review.game_title}

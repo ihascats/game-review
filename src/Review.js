@@ -125,8 +125,8 @@ export default function Review() {
 
   const dynamicBg = useRef();
 
-  if (reviewInfo) {
-    dynamicBg.current.style.backgroundImage = `url('https://cdn.cloudflare.steamstatic.com/steam/apps/${reviewInfo.steam_id}/header.jpg')`;
+  if (dynamicBg.current) {
+    dynamicBg.current.style.backgroundImage = `url('https://cdn.cloudflare.steamstatic.com/steam/apps/${localStorage.background}/header.jpg')`;
   }
 
   return (
