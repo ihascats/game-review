@@ -33,7 +33,7 @@ export default function Nav({
   }
 
   return (
-    <nav className=" grid grid-cols-2 transition-colors bg-neutral-300 h-14 items-center px-2 dark:bg-neutral-800">
+    <nav className=" grid grid-cols-2 transition-colors bg-neutral-300 h-14 items-center px-2 dark:bg-neutral-800 sticky top-0">
       <h1 className="font-mono text-2xl text-neutral-800 dark:text-neutral-200">
         GReview
       </h1>
