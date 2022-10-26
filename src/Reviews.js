@@ -45,6 +45,9 @@ export default function Reviews() {
       setDarkMode(localStorage.darkMode);
       darkSwitch.current.classList.add('dark');
     }
+    if (localStorage.titles === 'true') {
+      setTitleToggle(true);
+    }
   }, []);
 
   return (

@@ -40,7 +40,10 @@ export default function Nav({
       <div className=" flex justify-end gap-3">
         <button
           className="fill-neutral-500"
-          onClick={() => setTitleToggle(!titleToggle)}
+          onClick={() => {
+            localStorage.setItem('titles', !titleToggle);
+            setTitleToggle(!titleToggle);
+          }}
         >
           {uiIcons.titles}
         </button>
