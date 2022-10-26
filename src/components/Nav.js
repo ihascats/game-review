@@ -16,9 +16,11 @@ export default function Nav({
     if (darkSwitch.current.classList.contains('dark')) {
       darkSwitch.current.classList.remove('dark');
       setDarkMode(false);
+      localStorage.darkMode = false;
     } else {
       darkSwitch.current.classList.add('dark');
       setDarkMode(true);
+      localStorage.darkMode = true;
     }
   }
   function find(event) {

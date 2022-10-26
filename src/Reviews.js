@@ -14,22 +14,14 @@ export default function Reviews() {
 
   useEffect(() => {
     async function fetchReviews() {
-      if (localStorage.Authorization) {
-        const response = await fetch(
-          `${process.env.REACT_APP_APILINK}/reviews`,
-          {
-            mode: 'cors',
-            headers: new Headers({
-              Authorization: localStorage.Authorization,
-            }),
-          },
-        );
-        if (response.status === 200) {
-          const json = await response.json(); //extract JSON from the http response
-          return { reviews: json, response };
-        } else {
-          return { response };
-        }
+      const response = await fetch(`${process.env.REACT_APP_APILINK}/reviews`, {
+        mode: 'cors',
+      });
+      if (response.status === 200) {
+        const json = await response.json(); //extract JSON from the http response
+        return { reviews: json, response };
+      } else {
+        return { response };
       }
     }
 
@@ -49,6 +41,10 @@ export default function Reviews() {
         console.log(error);
       },
     );
+    if (localStorage.darkMode === 'true') {
+      setDarkMode(localStorage.darkMode);
+      darkSwitch.current.classList.add('dark');
+    }
   }, []);
 
   return (
