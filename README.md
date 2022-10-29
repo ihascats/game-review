@@ -1,4 +1,4 @@
-# GReview
+# <a href="https://ihascats.github.io/game-review/" target="_blank" rel="noopener">GReview</a>
 
 ##### Frontend for a custom <a href="https://github.com/ihascats/api" target="_blank" rel="noopener">api</a>
 ##### It's fully responsive, made easier thanks to <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener">Tailwind</a>
