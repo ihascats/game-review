@@ -1,6 +1,6 @@
 # <a href="https://ihascats.github.io/game-review/" target="_blank" rel="noopener">GReview</a>
 
-##### Frontend for a custom <a href="https://github.com/ihascats/api" target="_blank" rel="noopener">api</a>
+##### Frontend for a custom <a href="https://github.com/ihascats/api" target="_blank" rel="noopener">REST api</a>
 ##### It's fully responsive, made easier thanks to <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener">Tailwind</a>
 <p>
   <img src="https://img.shields.io/badge/React.js-3C005A?style=for-the-badge&logo=react&logoColor=white" height=30>
