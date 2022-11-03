@@ -135,7 +135,7 @@ export default function Review() {
       ref={dynamicBg}
     >
       <div
-        className={` items-center flex flex-col w-full h-full backdrop-blur-md`}
+        className={` items-center flex flex-col w-full h-full backdrop-blur-md dark:backdrop-brightness-75`}
       >
         {reviewInfo && steamInfo && String(hltbInfo) ? (
           <ReviewInfoPageCard

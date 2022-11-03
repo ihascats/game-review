@@ -4,14 +4,14 @@ export default function ReviewInfoPageCard({
   hltbInfo,
 }) {
   return (
-    <div className=" flex flex-col gap-6 sm:w-1/2 xl:w-1/3 2xl:w-1/4 self-center bg-gradient-to-br from-indigo-600 to-amber-600 text-slate-100 p-4 h-full overflow-y-scroll hide-scroll">
+    <div className=" flex flex-col gap-6 sm:w-1/2 xl:w-1/3 2xl:w-1/4 self-center bg-gradient-to-br from-yellow-200 to-pink-300 dark:from-indigo-600 dark:to-amber-600 text-slate-100 p-4 h-full overflow-y-scroll hide-scroll">
       <img
         alt=""
         src={`https://cdn.cloudflare.steamstatic.com/steam/apps/${reviewInfo.steam_id}/header.jpg`}
         className=" w-full"
       ></img>
 
-      <div className="bg-zinc-800 p-3 flex justify-between">
+      <div className="text-zinc-900 dark:text-zinc-100 bg-neutral-100 dark:bg-zinc-800 p-3 flex justify-between">
         <h1>{reviewInfo.game_title}</h1>
         <h1>
           {`${
@@ -25,7 +25,7 @@ export default function ReviewInfoPageCard({
           &#9733;
         </h1>
       </div>
-      <div className=" flex w-full justify-between bg-zinc-800 px-3 py-6">
+      <div className="text-zinc-900 dark:text-zinc-100 flex w-full justify-between bg-neutral-100 dark:bg-zinc-800 px-3 py-6">
         <div className="grid">
           <h2 className=" font-mono font-bold text-xs">Steam Price</h2>
           <h3 className=" font-mono">{steamInfo.final_formatted}</h3>
@@ -39,7 +39,9 @@ export default function ReviewInfoPageCard({
           )}
         </div>
         <div className="grid">
-          <h2 className=" font-mono font-bold text-xs">Price per hour~</h2>
+          <h2 className="text-zinc-900 dark:text-zinc-100 font-mono font-bold text-xs">
+            Price per hour~
+          </h2>
           {isNaN(hltbInfo) || steamInfo.final === 0 ? (
             <h3 className=" font-mono">N/A</h3>
           ) : (
@@ -49,7 +51,7 @@ export default function ReviewInfoPageCard({
           )}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 bg-zinc-800 px-3 py-6 ">
+      <div className="grid grid-cols-2 gap-5 text-zinc-900 dark:text-zinc-100 bg-neutral-100 dark:bg-zinc-800 px-3 py-6 ">
         <div className="grid">
           <h2 className=" font-mono font-bold text-xs">visuals</h2>
           <h3 className=" font-mono">{reviewInfo.visuals}&#9733;</h3>
