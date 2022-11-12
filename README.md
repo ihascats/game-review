@@ -5,7 +5,7 @@
 <p>
   <img src="https://img.shields.io/badge/React.js-3C005A?style=for-the-badge&logo=react&logoColor=white" height=30>
   <img src="https://img.shields.io/badge/JavaScript-3C005A?style=for-the-badge&logo=javascript&logoColor=white" height=30>
-  <img src="https://img.shields.io/badge/Tailwindcss-3C005A?style=for-the-badge&logo=typescript&logoColor=white" height=30>
+  <img src="https://img.shields.io/badge/Tailwindcss-3C005A?style=for-the-badge&logo=tailwindcss&logoColor=white" height=30>
 </p>
 Features: <i>Show/hide game titles, Dark mode, Search</i>  
 
